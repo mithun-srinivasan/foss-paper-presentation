@@ -156,6 +156,80 @@
       .timeline li {
         margin: 15px 0;
       }
+
+      /* ── PREFACE BENTO ── */
+
+      .preface-wrap {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 20px 40px;
+        box-sizing: border-box;
+      }
+
+      .preface-tag {
+        font-size: 12px;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        color: #00ff88;
+        margin-bottom: 20px;
+        opacity: 0.7;
+      }
+
+      .bento-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px;
+        width: 100%;
+      }
+
+      .bi {
+        border-radius: 10px;
+        padding: 18px 20px;
+        font-size: 18px;
+        font-weight: 600;
+        font-family: "JetBrains Mono", monospace;
+        display: flex;
+        align-items: flex-end;
+        min-height: 80px;
+        line-height: 1.3;
+        cursor: pointer;
+        border: 1px solid rgba(0, 255, 136, 0.2);
+        transition:
+          transform 0.18s ease,
+          background 0.18s ease,
+          color 0.18s ease,
+          box-shadow 0.18s ease;
+        text-decoration: none;
+        box-sizing: border-box;
+      }
+
+      .bi:hover {
+        transform: scale(1.05);
+        background: #00ff88 !important;
+        color: #000 !important;
+        box-shadow: 0 0 18px rgba(0, 255, 136, 0.5);
+      }
+
+      .bi.dark {
+        background: #0a1a10;
+        color: #00ff88;
+      }
+      .bi.mid {
+        background: #0f0f0f;
+        color: #9efed0;
+      }
+      .bi.light {
+        background: #050f08;
+        color: #5cffa9;
+      }
+      .bi.accent {
+        background: #00ff88;
+        color: #000;
+      }
     </style>
   </head>
 
@@ -169,7 +243,6 @@
     <div class="reveal">
       <div class="slides">
         <!-- TERMINAL INTRO -->
-
         <section>
           <div class="terminal-typing">
             mithun@linux:~$ <span id="type"></span><span class="cursor">█</span>
@@ -177,15 +250,12 @@
         </section>
 
         <!-- TITLE -->
-
         <section>
           <h1>
             <span style="color: #00ff88">Open Source</span>
             <span style="color: white">Is All You Need</span>
           </h1>
-
           <p>Empowering Innovation Through Free and Open Source Software</p>
-
           <p>
             Mithun Srinivasan<br />
             First Year, Computer Science and Engineering<br />
@@ -193,11 +263,118 @@
           </p>
         </section>
 
-        <!-- ABSTRACT -->
+        <!-- PREFACE BENTO (inserted after title) -->
+        <section>
+          <div class="preface-wrap">
+            <div class="preface-tag">// what's inside</div>
+            <div class="bento-grid">
+              <!-- row 1 -->
+              <div
+                class="bi accent"
+                style="grid-column: span 2; font-size: 22px"
+                onclick="goToSlide(3)"
+              >
+                Abstract
+              </div>
+              <div
+                class="bi mid"
+                style="grid-column: span 2"
+                onclick="goToSlide(4)"
+              >
+                Introduction
+              </div>
 
+              <!-- row 2 -->
+              <div
+                class="bi dark"
+                style="grid-column: span 1"
+                onclick="goToSlide(5)"
+              >
+                History of FOSS
+              </div>
+              <div
+                class="bi light"
+                style="grid-column: span 2"
+                onclick="goToSlide(6)"
+              >
+                Linux &amp; OS Timeline
+              </div>
+              <div
+                class="bi mid"
+                style="grid-column: span 1"
+                onclick="goToSlide(7)"
+              >
+                Growth &amp; Impact
+              </div>
+
+              <!-- row 3 -->
+              <div
+                class="bi dark"
+                style="grid-column: span 2"
+                onclick="goToSlide(8)"
+              >
+                FOSS Principles
+              </div>
+              <div
+                class="bi mid"
+                style="grid-column: span 2"
+                onclick="goToSlide(9)"
+              >
+                Ecosystem Architecture
+              </div>
+
+              <!-- row 4 -->
+              <div
+                class="bi light"
+                style="grid-column: span 1"
+                onclick="goToSlide(10)"
+              >
+                Workflow
+              </div>
+              <div
+                class="bi dark"
+                style="grid-column: span 1"
+                onclick="goToSlide(11)"
+              >
+                Challenges
+              </div>
+              <div
+                class="bi accent"
+                style="grid-column: span 2; font-size: 16px"
+                onclick="goToSlide(12)"
+              >
+                Case Study
+              </div>
+
+              <!-- row 5 -->
+              <div
+                class="bi mid"
+                style="grid-column: span 2"
+                onclick="goToSlide(13)"
+              >
+                GitHub Contributions
+              </div>
+              <div
+                class="bi light"
+                style="grid-column: span 1"
+                onclick="goToSlide(14)"
+              >
+                Conclusion
+              </div>
+              <div
+                class="bi dark"
+                style="grid-column: span 1"
+                onclick="goToSlide(15)"
+              >
+                Future Scope
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ABSTRACT -->
         <section>
           <h2>Abstract</h2>
-
           <p>
             Free and Open Source Software (FOSS) enables users to study, modify
             and distribute software freely which encourages global
@@ -206,23 +383,18 @@
         </section>
 
         <!-- INTRO -->
-
         <section>
           <h2>Introduction</h2>
-
           <p>
             Open source allows developers around the world to collaborate on
             building powerful technologies like Linux and Python.
           </p>
-
           <p>"Talk is cheap. Show me the code." - Linus Torvalds</p>
         </section>
 
         <!-- HISTORY -->
-
         <section>
           <h2>History of FOSS</h2>
-
           <ul>
             <li>Early computing culture shared software freely</li>
             <li>Free Software Movement promoted user freedom</li>
@@ -232,10 +404,8 @@
         </section>
 
         <!-- LINUX TIMELINE -->
-
         <section>
           <h2>Linux & Open Source Timeline</h2>
-
           <ul class="timeline">
             <li>1983 — GNU Project started</li>
             <li>1991 — Linux Kernel created</li>
@@ -247,10 +417,8 @@
         </section>
 
         <!-- GROWTH -->
-
         <section>
           <h2>Growth & Impact</h2>
-
           <ul>
             <li>Linux powers most servers</li>
             <li>Android uses Linux kernel</li>
@@ -260,10 +428,8 @@
         </section>
 
         <!-- PRINCIPLES -->
-
         <section>
           <h2>FOSS Principles</h2>
-
           <ul>
             <li>Freedom to run the program</li>
             <li>Freedom to study source code</li>
@@ -273,10 +439,8 @@
         </section>
 
         <!-- ARCHITECTURE -->
-
         <section>
           <h2>FOSS Ecosystem Architecture</h2>
-
           <div class="arch">
             <span>Developers</span>
             <span>→</span>
@@ -291,10 +455,8 @@
         </section>
 
         <!-- WORKFLOW -->
-
         <section>
           <h2>Open Source Development Workflow</h2>
-
           <ul>
             <li>Fork repository</li>
             <li>Modify code</li>
@@ -305,10 +467,8 @@
         </section>
 
         <!-- CHALLENGES -->
-
         <section>
           <h2>Challenges in FOSS</h2>
-
           <ul>
             <li>Maintainer burnout and limited funding</li>
             <li>Fragmented documentation across projects</li>
@@ -318,15 +478,11 @@
         </section>
 
         <!-- CASE STUDY -->
-
         <section>
           <h2>Sticker Brains Project</h2>
-
           <div class="repo-card">
             <h3>Sticker Brains</h3>
-
             <p id="repoDesc">Loading repository description...</p>
-
             <div
               style="
                 background: #222;
@@ -345,32 +501,25 @@
                 "
               ></div>
             </div>
-
             <p id="langLabel" style="margin-top: 10px; color: #9efed0">
               Top language usage: loading...
             </p>
-
             <br />
-
             <a
               href="https://github.com/mithun-srinivasan/sticker-brains"
               target="_blank"
             >
               github.com/mithun-srinivasan/sticker-brains
             </a>
-
             <br /><br />
-
             ⭐ Stars: <span id="stars">loading...</span> 🍴 Forks:
             <span id="forks">loading...</span>
           </div>
         </section>
 
         <!-- CONTRIBUTION -->
-
         <section>
           <h2>GitHub Contribution Activity</h2>
-
           <img
             src="https://ghchart.rshah.org/00ff88/mithun-srinivasan"
             style="width: 80%; border: 1px solid #00ff88"
@@ -378,10 +527,8 @@
         </section>
 
         <!-- CONCLUSION -->
-
         <section>
           <h2>Conclusion</h2>
-
           <ul>
             <li>Open source accelerates innovation</li>
             <li>Encourages collaboration</li>
@@ -390,10 +537,8 @@
         </section>
 
         <!-- FUTURE SCOPE -->
-
         <section>
           <h2>Future Scope</h2>
-
           <ul>
             <li>AI tools built on open models and open datasets</li>
             <li>FOSS-first digital infrastructure in education</li>
@@ -403,10 +548,8 @@
         </section>
 
         <!-- REFERENCES -->
-
         <section>
           <h2>References</h2>
-
           <ul>
             <li>
               [1] Linux Kernel Source Code -
@@ -494,37 +637,30 @@
         </section>
 
         <!-- CONTACT -->
-
         <section>
           <h2>Contact</h2>
-
           <div class="contact">
-            <a href="https://itsmithun06.notion.site/" target="_blank">
-              🌐 Website
-            </a>
-
-            <a href="https://github.com/mithun-srinivasan" target="_blank">
-              💻 GitHub
-            </a>
-
+            <a href="https://itsmithun06.notion.site/" target="_blank"
+              >🌐 Website</a
+            >
+            <a href="https://github.com/mithun-srinivasan" target="_blank"
+              >💻 GitHub</a
+            >
             <a
               href="https://www.linkedin.com/in/mithun-srinivasan-msec/"
               target="_blank"
+              >🔗 LinkedIn</a
             >
-              🔗 LinkedIn
-            </a>
           </div>
         </section>
 
         <!-- THANK YOU -->
-
         <section>
           <h1>Thank You</h1>
           <p>Questions?</p>
         </section>
 
         <!-- FINAL TERMINAL -->
-
         <section>
           <div class="terminal-typing">mithun@linux:~$ exit</div>
         </section>
@@ -594,7 +730,6 @@
         .then((res) => res.json())
         .then((data) => {
           if (data.message) {
-            /* API error (repo not found / rate limited) */
             document.getElementById("repoDesc").textContent =
               "A personal open source project by Mithun Srinivasan.";
             document.getElementById("stars").textContent = "–";
@@ -625,20 +760,17 @@
               "Top language usage: unavailable";
             return;
           }
-
           const entries = Object.entries(langs);
           if (entries.length === 0) {
             document.getElementById("langLabel").textContent =
               "Top language usage: unavailable";
             return;
           }
-
           const totalBytes = entries.reduce((sum, [, bytes]) => sum + bytes, 0);
           const [topLanguage, topBytes] = entries.sort(
             (a, b) => b[1] - a[1],
           )[0];
           const topPercent = Math.round((topBytes / totalBytes) * 100);
-
           document.getElementById("langBar").style.width = `${topPercent}%`;
           document.getElementById("langLabel").textContent =
             `Top language usage: ${topLanguage} (${topPercent}%)`;
@@ -648,7 +780,7 @@
             "Top language usage: unavailable";
         });
 
-      /* Reveal list items one-by-one to improve audience focus */
+      /* Reveal list items one-by-one */
       document
         .querySelectorAll(".slides section ul li")
         .forEach((item) => item.classList.add("fragment"));
@@ -660,8 +792,12 @@
         progress: true,
       });
 
-      /* MATRIX RAIN */
+      /* BENTO NAVIGATION — 0-based index passed directly to Reveal */
+      function goToSlide(index) {
+        Reveal.slide(index);
+      }
 
+      /* MATRIX RAIN */
       const canvas = document.getElementById("matrix");
       const ctx = canvas.getContext("2d");
 
@@ -672,10 +808,8 @@
       function resizeMatrix() {
         width = canvas.width = window.innerWidth;
         height = canvas.height = window.innerHeight;
-
         columns = Math.floor(width / fontSize);
         drops = [];
-
         for (let i = 0; i < columns; i++) {
           drops[i] = Math.random() * height;
         }
@@ -687,22 +821,16 @@
       function drawMatrix() {
         ctx.fillStyle = "rgba(0,0,0,0.25)";
         ctx.fillRect(0, 0, width, height);
-
         ctx.fillStyle = "rgba(0,255,136,0.35)";
         ctx.font = fontSize + "px JetBrains Mono";
-
         for (let i = 0; i < drops.length; i++) {
           const char = letters[Math.floor(Math.random() * letters.length)];
-
           ctx.fillText(char, i * fontSize, drops[i]);
-
           drops[i] += fontSize;
-
           if (drops[i] > height && Math.random() > 0.975) {
             drops[i] = 0;
           }
         }
-
         requestAnimationFrame(drawMatrix);
       }
 
